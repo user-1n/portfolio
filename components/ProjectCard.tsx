@@ -122,11 +122,11 @@ import { motion } from 'framer-motion';
 interface Props {
   image: string;
   title: string;
-  text: string;
+  // text: string;
   link: string;
 }
 
-const ProjectCard: React.FC<Props> = ({ image, title, text, link }) => {
+const ProjectCard: React.FC<Props> = ({ image, title,link }) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -173,7 +173,7 @@ const ProjectCard: React.FC<Props> = ({ image, title, text, link }) => {
           <div className="absolute inset-0 w-full h-full rounded-lg bg-black opacity-50 z-[-1]" />
           <div className="flex flex-col gap-2 p-4 z-30">
             <h1 className="text-white text-xl font-semibold">{title}</h1>
-            <p className="text-gray-200 text-base">{text}</p>
+            {/* <p className="text-gray-200 text-base">{text}</p> */}
             <a
               href={link}
               target="_blank"
